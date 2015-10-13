@@ -39,7 +39,7 @@ taula_pols={
 
 # mapa interactiu plaques i coordenades: http://earthquake.usgs.gov/earthquakes/map/
 
-taula_estudi=[
+taula_estudi=array([
     [ 54,    169, 'Na-Pa'  ],
     [ 52,   -169, 'Na-Pa'  ],
     [ 38,   -122, 'Na-Pa'  ],
@@ -60,14 +60,15 @@ taula_estudi=[
     [ 66,    -18, 'Eur-NA' ],
     [ 36,     -8, 'Af-Eur' ],
     [ 35,     25, 'Af-Eur' ],
-    [-12,    120, 'In-P'   ],
+    [-12,    120, 'In-Eur' ],
     [ 35,     72, 'In-Eur' ],
     [-35,    -74, 'Nz-SA'  ],
     [ -4,    -82, 'Cc-Nz'  ],
     [ 20,   -106, 'CC-NA'  ]
-]
+])
 
 def deg2rad(deg):
+    #rad=zeros(shape(deg))
     
     rad=deg*pi/180
     
