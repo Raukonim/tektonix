@@ -40,10 +40,10 @@ taula_pols={
 # mapa interactiu plaques i coordenades: http://earthquake.usgs.gov/earthquakes/map/
 
 taula_estudi=array([
-    [ 54,    169, 'Na-Pa'  ],
-    [ 52,   -169, 'Na-Pa'  ],
-    [ 38,   -122, 'Na-Pa'  ],
-    [ 26,   -110, 'Na-Pa'  ],
+    [ 54,    169, 'NA-P'   ],
+    [ 52,   -169, 'NA-P'   ],
+    [ 38,   -122, 'NA-P'   ],
+    [ 26,   -110, 'NA-P'   ],
     [-13,   -112, 'Nz-P'   ],
     [-36,   -110, 'Nz-P'   ],
     [-59,   -150, 'Ant-P'  ],
@@ -64,7 +64,7 @@ taula_estudi=array([
     [ 35,     72, 'In-Eur' ],
     [-35,    -74, 'Nz-SA'  ],
     [ -4,    -82, 'Cc-Nz'  ],
-    [ 20,   -106, 'CC-NA'  ]
+    [ 20,   -106, 'Cc-NA'  ]
 ])
 
 def deg2rad(deg):
@@ -91,3 +91,9 @@ def signe_C(latp,latx, a):
     cosC=sin(latp)-cos(a)*sin(latx)
     
     return cosC
+
+dades_pol_punt=zeros((25,3))
+for i in range(25):    
+    dades_pol_punt[i,:]=taula_pols[taula_estudi[i,2]]
+
+
